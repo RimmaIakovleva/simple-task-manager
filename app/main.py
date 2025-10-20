@@ -19,11 +19,13 @@ users_db = {}
 class TaskCreate(BaseModel):
     title: str
     description: Optional[str] = None
+    priority: str = "medium"  # НОВОЕ ПОЛЕ
 
 class Task(BaseModel):
     id: str
     title: str
     description: Optional[str] = None
+    priority: str = "medium"  # НОВОЕ ПОЛЕ
     completed: bool = False
     created_at: str
 
